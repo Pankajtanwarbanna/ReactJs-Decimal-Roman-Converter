@@ -1,5 +1,43 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## ReactJs Decimal to Roman Converter
+
+This project is created using ReactJs as front end JavaScript library for building user interface. This converter converts decimal number to roman numbers.
+
+Decimal Input Range : [1,3999]
+
+## Built with :
+* Nodejs
+* ReactJs
+
+## Get Started :
+
+### Prerequisites -
+
+1. Install NodeJs
+```
+$ sudo apt-get update
+$ sudo apt-get install nodejs
+```
+2. Install npm
+```
+$ sudo apt-get install npm
+```
+3. Install create-react-app
+```
+$ sudo npm install -g create-react-app
+```
+4. Create React App
+```
+$ sudo create-react-app ReactJs-Decimal-Roman-Converter
+```
+### Run Software
+
+1. git clone https://github.com/Pankajtanwarbanna/ReactJs-Decimal-Roman-Converter.git
+2. cd ReactJs-Decimal-Roman-Converter
+3. npm install
+4. npm start
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,43 +64,3 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -19,18 +19,25 @@ class App extends React.Component {
     convertRoman(e) {
 
         if(isNaN(e.target.value)) {
+            // If input is not a number
             this.setState({ error : 'Please enter a valid number.' });
         } else {
+            // If input is a valid number
             this.setState({ error : '' });
             this.setState({ roman : '' });
 
-            if(e.target.value === '0') {
-                this.setState({ error : 'Value must be in range 1 to 1000.' });
-            } else if (e.target.value === ''){
+            if (e.target.value === ''){
+                // Nothing is input
+                this.setState({ error : '' });
                 this.setState({ roman : ''});
+            } else if(Number(e.target.value) > 3999 || Number(e.target.value) <= 0) {
+                // Value must be in [1,3999]
+                this.setState({ error : 'Value must be in range 1 to 3999' });
             } else {
                 //console.log(e.target.value);
                 //console.log(DecimalToRoman(e.target.value));
+                // Convert to Roman
+                this.setState({ error : '' });
                 this.setState({ roman : DecimalToRoman(e.target.value) })
             }
         }
@@ -41,35 +48,30 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="frame">
-                    <div className="nav">
-                        <ul className="links">
-                            <li className="signin-active"><a className="btn">Decimal to Roman Converter</a></li>
+                <div className="MainFrame">
+                    <div className="header">
+                        <ul>
+                            <li className="main-heading"><a>Decimal to Roman Converter</a></li>
                         </ul>
                     </div>
 
-                    <form className="form-signin">
+                    <form className="converter-form">
                         <label>Decimal </label>
                         <input className="form-styling" type="text" value={this.state.decimal} onChange={this.convertRoman}/>
                         <label className="errorLabel"> { this.state.error}</label>
 
                         <label>Roman </label>
                         <input className="form-styling" type="text" value={this.state.roman} disabled/>
-
                     </form>
-
-
                 </div>
-
-
             </div>
         );
     }
 }
 
-function DecimalToRoman(num) {
+function DecimalToRoman(decimal) {
 
-    var romanMatrix = [
+    let roman2DMatrix = [
         [1000, 'M'],
         [900, 'CM'],
         [500, 'D'],
@@ -85,13 +87,13 @@ function DecimalToRoman(num) {
         [1, 'I']
     ];
 
-    for (var i = 0; i < romanMatrix.length; i++) {
-        if(num === 0) {
+    for (let i = 0; i < roman2DMatrix.length; i++) {
+        if(decimal === 0) {
             return '';
         }
 
-        if (num >= romanMatrix[i][0]) {
-            return romanMatrix[i][1] + DecimalToRoman(num - romanMatrix[i][0]);
+        if (decimal >= roman2DMatrix[i][0]) {
+            return roman2DMatrix[i][1] + DecimalToRoman(decimal - roman2DMatrix[i][0]);
         }
     }
 }
