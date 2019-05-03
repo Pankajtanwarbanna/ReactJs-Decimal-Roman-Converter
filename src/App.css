@@ -4,12 +4,12 @@ body {
 
 .container {
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: auto;
 }
 
 .MainFrame {
-  height: 400px;
+  height: 450px;
   width: 50%;
   background:
           linear-gradient(
@@ -34,7 +34,7 @@ body {
 }
 
 li {
-  padding-left: 10px;
+  padding-left: 140px;
   font-size: 18px;
   display: inline;
   text-align: left;
@@ -58,14 +58,16 @@ li {
   height: 375px;
   font-size: 16px;
   font-weight: 300;
-  padding-left: 37px;
-  padding-right: 37px;
+  padding-left: 100px;
+  padding-right: 40px;
   transition: opacity .5s ease, transform .5s ease;
 }
 
 .converter-form input {
   color: #ffffff;
   font-size: 13px;
+}
+:focus {outline: none;
 }
 
 .form-styling {
@@ -90,5 +92,17 @@ label {
 
 .errorLabel {
   color: red;
+}
+
+.footer {
+  margin-top: 90px;
+  border-top : solid 2px grey;
+}
+
+.footer-link {
+  padding-top: 10px;
+  align-content: center;
+  align-items: center;
+  margin-left: 90px;
 }
 

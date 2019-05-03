@@ -62,6 +62,10 @@ class App extends React.Component {
 
                         <label>Roman </label>
                         <input className="form-styling" type="text" value={this.state.roman} disabled/>
+
+                        <div className="footer">
+                            <label href="#" className="footer-link">Made with <heart> &nbsp;❤&nbsp;</heart> By Pankaj Tanwar</label>
+                        </div>
                     </form>
                 </div>
             </div>
